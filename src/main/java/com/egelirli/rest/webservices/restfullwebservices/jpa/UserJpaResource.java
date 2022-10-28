@@ -42,7 +42,7 @@ public class UserJpaResource {
 	}
 
 	// GET /users
-	@GetMapping("/users/{id}")
+	@GetMapping("/users/{userId}")
 	public EntityModel<Optional<User>> retrieveUser(@PathVariable int userId) {
 		
 		Optional<User> user = userRepo.findById(userId);
