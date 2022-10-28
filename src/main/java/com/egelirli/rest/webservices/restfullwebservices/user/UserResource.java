@@ -28,13 +28,13 @@ public class UserResource {
 	}
 
 	// GET /users
-	@GetMapping("/users")
+	//@GetMapping("/users")
 	public List<User> retrieveAllUsers() {
 		return service.findAll();
 	}
 
 	// GET /users
-	@GetMapping("/users/{id}")
+	//@GetMapping("/users/{id}")
 	public EntityModel<User> retrieveUser(@PathVariable int id) {
 		
 		User user = service.findOne(id);
@@ -53,7 +53,7 @@ public class UserResource {
 		
 	}	
 
-	@DeleteMapping("/users/{id}")
+	//@DeleteMapping("/users/{id}")
 	public Boolean deleteUser(@PathVariable int id) {
 		
 		return service.deleteUserById(id);
@@ -68,7 +68,7 @@ public class UserResource {
 	}	
 	
 	
-	@PostMapping("/users")
+	//@PostMapping("/users")
 	public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
 		
 		User savedUser = service.save(user);
